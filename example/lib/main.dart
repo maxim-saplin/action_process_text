@@ -3,16 +3,18 @@ import 'dart:async';
 import 'package:action_process_text/action_process_text.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
-  _MyAppState createState() => _MyAppState();
+  MyAppState createState() => MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
-  _MyAppState() {
+class MyAppState extends State<MyApp> {
+  MyAppState() {
     initActionProcessText();
   }
 
@@ -25,19 +27,21 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ActionProcessText.calledFromNative ? MainPage(inputText) : Home(),
+      home: ActionProcessText.calledFromIntent
+          ? MainPage(inputText)
+          : const Home(),
     );
   }
 }
 
 class MainPage extends StatefulWidget {
   final String text;
-  MainPage(this.text);
+  const MainPage(this.text, {Key? key}) : super(key: key);
   @override
-  _MainPageState createState() => _MainPageState();
+  MainPageState createState() => MainPageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -48,8 +52,8 @@ class _MainPageState extends State<MainPage> {
         ),
         body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Container(child: Text('Selected Text:\n')),
-            Container(child: Text('${widget.text}')),
+            const Text('Selected Text:\n'),
+            Text(widget.text),
           ]),
         ),
       ),
@@ -58,9 +62,11 @@ class _MainPageState extends State<MainPage> {
 }
 
 class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Not called from native side.'),
     );
   }

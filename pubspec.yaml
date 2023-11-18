@@ -1,7 +1,7 @@
 name: action_process_text
 description: A Flutter plugin for ACTION_PROCESS_TEXT implementation in Android.
 version: 2.0.0
-repository: https://github.com/coder-with-a-bushido/ACTION_PROCESS_TEXT-Flutter
+repository: https://github.com/maxim-saplin/action_process_text
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -13,6 +13,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints:
 
 flutter:
   plugin:

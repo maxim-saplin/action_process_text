@@ -1,3 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.example.action_process_text">
+  <!-- <application
+        android:name="${applicationName}">
+        <activity android:name="io.flutter.embedding.android.FlutterActivity"/>
+  </application> -->
 </manifest>

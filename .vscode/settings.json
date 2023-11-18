@@ -1,3 +1,8 @@
 {
-    "dart.flutterSdkPath": "C:\\Users\\karth\\fvm\\versions\\stable"
+    "dart.flutterSdkPath": "C:\\Users\\karth\\fvm\\versions\\stable",
+    "spellright.language": [],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex"
+    ]
 }
